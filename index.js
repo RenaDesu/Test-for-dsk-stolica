@@ -24,3 +24,13 @@ const showSlide = () => {
 }
 
 showSlide();
+
+setInterval(() => {
+    sliderCount++;
+    if (sliderCount > productSliderDots.length - 1) {
+        sliderCount = 0;
+    }
+    rollSlider();
+    currentSlide(sliderCount);
+
+}, 10000);
