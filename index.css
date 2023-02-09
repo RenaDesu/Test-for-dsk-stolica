@@ -230,6 +230,7 @@
 
 .product-card__slide {
     max-height: 100%;
+    border-radius: 8px;
 }
 
 
@@ -335,6 +336,12 @@
     border: 2px solid rgb(225, 225, 225);
 }
 
+.product-card__buttons-group:hover,
+.product-card__buttons-group:focus,
+.product-card__buttons-group:active {
+    opacity: 100%;
+}
+
 .product-card__label {
     position: absolute;
     top: 10%;
@@ -349,6 +356,7 @@
     max-width: 50px;
     font-weight: 700;
     border: none;
+    cursor: pointer;
 }
 
 .product-card__quantity::-webkit-outer-spin-button,

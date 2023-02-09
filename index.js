@@ -1,5 +1,8 @@
 const productSliderLine = document.querySelector('.product-card__slider-line');
 const productSliderDots = document.querySelectorAll('.product-card__slider-dot');
+const buttonMinus = document.querySelector('.product-card__button--minus');
+const buttonPlus = document.querySelector('.product-card__button--plus');
+const quantityInput = document.querySelector('.product-card__quantity');
 
 let sliderCount = 0;
 
@@ -34,3 +37,20 @@ setInterval(() => {
     currentSlide(sliderCount);
 
 }, 10000);
+
+const onMinusButtonClick = () => {
+    quantityInput.value--;  
+    if (quantityInput.value <= 1) {
+        buttonMinus.setAttribute('disabled', 'disabled');
+    }
+}
+
+const onPlusButtonClick = () => {
+    quantityInput.value++;  
+    if (quantityInput.value >= 99) {
+        buttonPlus.setAttribute('disabled', 'disabled');
+    }
+}
+
+buttonMinus.addEventListener('click', onMinusButtonClick);
+buttonPlus.addEventListener('click', onPlusButtonClick);
