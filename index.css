@@ -217,6 +217,7 @@
     height: 350px;
     max-width: 300px;
     overflow: hidden;
+    
 }
 
 .product-card__slider-line {
@@ -344,7 +345,7 @@
 
 .product-card__label {
     position: absolute;
-    top: 10%;
+    top: 14%;
     left: 50%;
     z-index: 2;
 }
@@ -352,17 +353,23 @@
 .product-card__quantity {
     position: absolute;
     top: 20%;
-    left: 33%;
+    left: 30%;
     max-width: 50px;
     font-weight: 700;
     border: none;
     cursor: pointer;
+    -moz-appearance: textfield;
 }
 
 .product-card__quantity::-webkit-outer-spin-button,
 .product-card__quantity::-webkit-inner-spin-button {
-    appearance: none;
+    -webkit-appearance: none;
     margin: 0;
+}
+
+.product-card__quantity:hover,
+.product-card__quantity:focus {
+    -moz-appearance: textfield;
 }
 
 .product-card__button {
